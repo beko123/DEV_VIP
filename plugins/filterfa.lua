@@ -1,7 +1,7 @@
 local function addword(msg, name)
     local hash = 'chat:'..msg.to.id..':badword'
     redis:hset(hash, name, 'newword')
-    return "کلمه جدید به فیلتر کلمات اضافه شد\n>"..name
+    return "تمت إضافة كلمة جديدة إلى كلمات المرشحه\n>"..name
 end
 
 local function get_variables_hash(msg)
@@ -15,7 +15,7 @@ local function list_variablesbad(msg)
 
   if hash then
     local names = redis:hkeys(hash)
-    local text = 'لیست کلمات غیرمجاز :\n\n'
+    local text = 'قائمة الكلمات السيئة :\n\n'
     for i=1, #names do
       text = text..'> '..names[i]..'\n'
     end
@@ -67,11 +67,11 @@ function clear_commandsbad(msg, cmd_name)
   --Save on redis  
   local hash = get_variables_hash(msg)
   redis:hdel(hash, cmd_name)
-  return ''..cmd_name..'  پاک شد'
+  return ''..cmd_name..'  مسح'
 end
 
 local function run(msg, matches)
-  if matches[2] == 'فیلتر' then
+  if matches[2] == 'فلتر' then
   if not is_momod(msg) then
    return 'only for moderators'
   end
@@ -86,7 +86,7 @@ local function run(msg, matches)
 if not is_momod(msg) then return '_|_' end
   local asd = '1'
     return clear_commandbad(msg, asd)
-  elseif matches[2] == 'خ فیلتر' or matches[2] == 'خ فیلتر' then
+  elseif matches[2] == 'الفلتره' or matches[2] == 'الفلتره' then
    if not is_momod(msg) then return '_|_' end
     return clear_commandsbad(msg, matches[3])
   else
@@ -98,11 +98,11 @@ end
 
 return {
   patterns = {
-  "^([!/#])(خ فیلتر) (.*)$",
-  "^([!/#])(فیلتر) (.*)$",
-   "^([!/#])(خ فیلتر) (.*)$",
-    "^([!/#])(لیست فیلتر)$",
-    "^([!/#])(حذف) لیست فیلتر$",
+  "^([!/#])(فتلر) (.*)$",
+  "^([!/#])(فتلر) (.*)$",
+   "^([!/#])(الفتلر) (.*)$",
+    "^([!/#])(القائمة)$",
+"^([!/#])(حذف) القائمة$",
 "^(.+)$",
 	   
   },
