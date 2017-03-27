@@ -6,7 +6,7 @@ local function run(msg, matches)
       if matches[1] == 'fwd' and not matches[2] and is_sudo(msg) then
       data['f2a'] = 'waiting'
       save_data(_config.moderation.data, data)
-      return "اکنون متن خود را بفرستید"
+      return "الآن إرسال النص"
     end
     if data and data['f2a'] == 'waiting' and is_sudo(msg) then
       local groups = 'groups'
@@ -29,4 +29,4 @@ return {
   run = run
 }
 
--- Edited By ℱḯґεℱøϰ
+-- Edited By beko
