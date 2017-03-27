@@ -1,5 +1,5 @@
---return by @mrr619
--- channel @antispamandhack
+--return by @DEV_VIP_TEAM
+-- channel @MAX_HP85
 
 local function check_member_super_deleted(cb_extra, success, result)
 local receiver = cb_extra.receiver
@@ -25,9 +25,9 @@ channel_get_users(receiver, check_member_super_deleted,{receiver = receiver, msg
  return {
        patterns = {
     "^[/#!](clean deleted)$",
-    "^[!#/](حذف دیلیت اکانتی ها)$",
+    "^[!#/](طرد المحذوف)$",
  },
 run = run,
 }
---return by @mrr619
--- channel @antispamandhack
+--return by @DEV_VIP_TEAM
+-- channel @MAX_HP85
