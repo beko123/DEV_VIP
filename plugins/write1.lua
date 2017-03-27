@@ -180,19 +180,19 @@
 
 		table.insert(result, text)
 	end
-	local result_text = "کلمه ی اولیه: "..matches[2].."\nطراحی با "..tostring(#fonts).." فونت:\n\n"
+	local result_text = "كلمة الأولية: "..matches[2].."\nطراحی با "..tostring(#fonts).." الخطوط:\n\n"
 	a=0
 	for v=1,#result do
 		a=a+1
 		result_text = result_text..a.."- "..result[a].."\n\n"
 	end
-	return result_text.."@antispamandhack"
+	return result_text.."@dev_vip_team"
 end
 
 return {
 	description = "Fantasy Writer",
-	usagehtm = '<tr><td align="center">write متن</td><td align="right">با استفاده از این پلاگین میتوانید متون خود را با فونت های متنوع و زیبایی طراحی کنید. حد اکثر کاراکتر های مجاز 20 عدد میباشد و فقط میتوانید از حروف انگلیسی و اعداد استفاده کنید</td></tr>',
-	usage = {"write [text] : زیبا نویسی",},
+	usagehtm = '<tr><td align="center">write متن</td><td align="right">مع هذا يمكنك توصيل النصوص الخاصة بك مع مختلف الخطوط والتصميم الجميل. أحرف الحد الأقصى المسموح به هو 20، ويمكن فقط استخدام الأحرف الإنجليزية والأرقام</td></tr>',
+	usage = {"write [text] : الكتابة الجميلة",},
 	patterns = {
 		"^[#!/]([Ww]rite) (.*)",
 		"^[!#/](زخرفه) (.*)",
