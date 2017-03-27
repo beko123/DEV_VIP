@@ -1,8 +1,8 @@
 --[[
 
 #
-#     @antispamandhack
-#   @mrr619bot
+#     @DEV_VIP_TEAM
+#   @MAX_HP85
 #      
 
 ]]
@@ -73,13 +73,13 @@ function run(msg, matches)
 	local data = jdat.data.timings
 	local text = 'شهر: '..city
 	  text = text..'\nاذان صبح: '..data.Fajr
-	  text = text..'\nطلوع آفتاب: '..data.Sunrise
+	  text = text..'\nاذان العصر: '..data.Sunrise
 	  text = text..'\nاذان ظهر: '..data.Dhuhr
-	  text = text..'\nغروب آفتاب: '..data.Sunset
+	  text = text..'\nاذان العصر: '..data.Sunset
 	  text = text..'\nاذان مغرب: '..data.Maghrib
-	  text = text..'\nعشاء : '..data.Isha
+	  text = text..'\nاذان العشاء : '..data.Isha
 	  text = text..'\n\n@dastoratrobot'
-	if string.match(text, '0') then text = string.gsub(text, '0', '۰') end
+	if string.match(text, '0') then text = string.gsub(text, '0', '0') end
 	if string.match(text, '1') then text = string.gsub(text, '1', '۱') end
 	if string.match(text, '2') then text = string.gsub(text, '2', '۲') end
 	if string.match(text, '3') then text = string.gsub(text, '3', '۳') end
