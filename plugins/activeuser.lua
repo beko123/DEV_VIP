@@ -151,26 +151,26 @@ maxname[2] = user.print_name
 	maxoth[3] = redis:get('utmsgoth:'..maxid[3]..':'..cb_extra)
 	end
 	if not maxuser[1] or maxuser[1] == '' then
-	maxuser[1] = 'ندارد'
+	maxuser[1] = 'لا'
 	else
 	maxuser[1] = '@'..maxuser[1]
 	end
 	if not maxuser[2] or maxuser[2] == '' then
-	maxuser[2] = 'ندارد'
+	maxuser[2] = 'لا'
 	else
 	maxuser[2] = '@'..maxuser[2]
 	end
 	if not maxuser[3] or maxuser[3] == '' then
-	maxuser[3] = 'ندارد'
+	maxuser[3] = 'لا'
 	else
 	maxuser[3] = '@'..maxuser[3]
 end
-local text = '♨️فعالان امروز گروه\n1⃣ '..maxname[1]..'〖'..maxuser[1]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[1] + maxph[1] + maxst[1] + maxoth[1]..'\n\n👾استیکر: '..maxst[1]..'\n\n📷تصویر: '..maxph[1]..'\n\n📃 متن: '..maxtex[1]..'\n\n📦 سایر: '..maxoth[1]
+local text = '♨️ المجموعه مفعله اليوم\n1⃣ '..maxname[1]..'〖'..maxuser[1]..'〗\n\n📨عدد الرسائل المرسله: '..maxtex[1] + maxph[1] + maxst[1] + maxoth[1]..'\n\n👾🎗: '..maxst[1]..'\n\n📷الصور: '..maxph[1]..'\n\n📃 النصوص لمرسله: '..maxtex[1]..'\n\n📦 غيرها : '..maxoth[1]
 if maxid[2] then
 	if not maxid[3] then
-text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾استیکر: '..maxst[2]..'\n\n📷تصویر: '..maxph[2]..'\n\n📃 متن: '..maxtex[2]..'\n\n📦 سایر: '..maxoth[2]
+text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨عدد الرسائل المرسله: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾ا: '..maxst[2]..'\n\n📷الصور: '..maxph[2]..'\n\n📃 النصوص المرسله: '..maxtex[2]..'\n\n📦 غيرها: '..maxoth[2]
 else
-text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾استیکر: '..maxst[2]..'\n\n📷تصویر: '..maxph[2]..'\n\n📃 متن: '..maxtex[2]..'\n\n📦 سایر: '..maxoth[2]..'\n\n 3⃣ '..maxname[3]..' 〖'..maxuser[3]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[3] + maxph[3] + maxst[3] + maxoth[3]..'\n\n👾استیکر: '..maxst[3]..'\n\n📷تصویر: '..maxph[3]..'\n\n📃 متن: '..maxtex[3]..'\n\n📦 سایر: '..maxoth[3]
+text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨عدد الرسائل المرسله : '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾ا: '..maxst[2]..'\n\n📷الصور: '..maxph[2]..'\n\n📃 النصوص المرسله: '..maxtex[2]..'\n\n📦 غيرها: '..maxoth[2]..'\n\n    '..maxname[3]..' 〖'..maxuser[3]..'〗\n\n📨عدد الرسائل المرسله: '..maxtex[3] + maxph[3] + maxst[3] + maxoth[3]..'\n\n👾ا: '..maxst[3]..'\n\n📷الصور المرسله: '..maxph[3]..'\n\n📃 النصوص المرسله: '..maxtex[3]..'\n\n📦 غيرها: '..maxoth[3]
 end
 end
 send_msg('chat#id'..cb_extra, text, ok_cb, true)
