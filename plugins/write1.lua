@@ -1,9 +1,9 @@
 ﻿local function run(msg, matches)
 	if #matches < 2 then
-		return "بعد از این دستور، با قید یک فاصله کلمه یا جمله ی مورد نظر را جهت زیبا نویسی وارد کنید"
+		return "لزخرفه كلمه محدده"
 	end
 	if string.len(matches[2]) > 20 then
-		return "حداکثر حروف مجاز 20 کاراکتر انگلیسی و عدد است"
+		return "الحد الأقصى المسموح به 20 حرفا الحروف الإنجليزية وأرقام"
 	end
 	local font_base = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,9,8,7,6,5,4,3,2,1,.,_"
 	local font_hash = "z,y,x,w,v,u,t,s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,Z,Y,X,W,V,U,T,S,R,Q,P,O,N,M,L,K,J,I,H,G,F,E,D,C,B,A,0,1,2,3,4,5,6,7,8,9,.,_"
@@ -195,7 +195,7 @@ return {
 	usage = {"write [text] : زیبا نویسی",},
 	patterns = {
 		"^[#!/]([Ww]rite) (.*)",
-		"^[!#/](نوشتن) (.*)",
+		"^[!#/](زخرفه) (.*)",
 		"^([Ww]rite)$",
 		},
 	run = run
